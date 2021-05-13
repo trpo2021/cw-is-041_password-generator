@@ -5,4 +5,4 @@
 #include <string.h>
 
 bool getPasswordProperties(
-        password_properties& property, int argc, char* argv[]);
+        password_properties* property, int argc, char* argv[]);
