@@ -1,4 +1,4 @@
-#include "helpinform.h"
+#include "helpInform.h"
 
 void helpInformation()
 {
