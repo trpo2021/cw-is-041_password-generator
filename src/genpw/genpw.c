@@ -1,3 +1,4 @@
+#include "libpassgen/passgen.h"
 #include <stdio.h>
 
 int main()
