@@ -1,5 +1,7 @@
 #pragma once
 #include "password_properties.h"
+#include "check.h"
+#include "helpInform.h"
 #include <getopt.h>
 #include <stdbool.h>
 #include <stdio.h>
