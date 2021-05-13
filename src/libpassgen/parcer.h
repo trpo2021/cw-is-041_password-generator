@@ -1,3 +1,5 @@
+#pragma once
+#include "password_properties.h"
 #include <getopt.h>
 #include <stdbool.h>
 #include <stdio.h>
