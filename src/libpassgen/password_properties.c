@@ -36,7 +36,6 @@ password_properties initHardPasswordProperties()
 
     return property;
 }
-
 void setCount(password_properties* property, int count)
 {
     property->count = count;
@@ -61,13 +60,8 @@ void setSpecialSymbol(password_properties* property, bool flag_special_symbol)
 {
     property->flag_special_symbol = flag_special_symbol;
 }
-
 bool checkSymbol(password_properties property)
 {
     return property.flag_capital_letter + property.flag_number
             + property.flag_small_letter + property.flag_special_symbol;
-}
-void helpInformation(void)
-{
-    printf("Help information\n");
 }

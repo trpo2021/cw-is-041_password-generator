@@ -30,4 +30,3 @@ void setCapitalLetter(password_properties* property, bool flag_capital_letter);
 void setSmallLetter(password_properties* property, bool flag_small_letter);
 void setSpecialSymbol(password_properties* property, bool flag_special_symbol);
 bool checkSymbol(password_properties property);
-void helpInformation(void);
