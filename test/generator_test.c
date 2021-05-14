@@ -6,7 +6,7 @@ CTEST(generatorPassword, generatorPassword_test1)
 {
     password_properties property = initEasyPasswordProperties();
 
-    char *result = generatorPassword(property);
+    char* result = generatorPassword(property);
 
     ASSERT_TRUE(checkSmallLetter(result, property.length));
     ASSERT_FALSE(checkNumber(result, property.length));
@@ -20,7 +20,7 @@ CTEST(generatorPassword, generatorPassword_test2)
 {
     password_properties property = initMediumPasswordProperties();
 
-    char *result = generatorPassword(property);
+    char* result = generatorPassword(property);
 
     ASSERT_TRUE(checkSmallLetter(result, property.length));
     ASSERT_TRUE(checkNumber(result, property.length));
@@ -34,7 +34,7 @@ CTEST(generatorPassword, generatorPassword_test3)
 {
     password_properties property = initHardPasswordProperties();
 
-    char *result = generatorPassword(property);
+    char* result = generatorPassword(property);
 
     ASSERT_TRUE(checkSmallLetter(result, property.length));
     ASSERT_TRUE(checkNumber(result, property.length));
