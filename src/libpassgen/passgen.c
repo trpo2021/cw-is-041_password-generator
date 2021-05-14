@@ -69,3 +69,19 @@ char** generatorPasswords(password_properties property)
 
     return result;
 }
+
+void printPasswords(char** passwords, int count)
+{
+    for (int i = 0; i < count; i++) {
+        printf("%s\n", passwords[i]);
+    }
+}
+
+void freePasswords(char** passwords, int count)
+{
+    for (int i = 0; i < count; i++) {
+        free(passwords[i]);
+    }
+
+    free(passwords);
+}
