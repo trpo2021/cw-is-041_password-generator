@@ -7,3 +7,6 @@
 
 char* generatorPassword(password_properties property);
 char** generatorPasswords(password_properties property);
+
+void printPasswords(char** passwords, int count);
+void freePasswords(char** passwords, int count);
