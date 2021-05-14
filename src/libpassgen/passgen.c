@@ -61,7 +61,7 @@ char* generatorPassword(password_properties property)
 
 char** generatorPasswords(password_properties property)
 {
-    char** result = malloc(property.count * sizeof(char));
+    char** result = malloc(property.count * sizeof(char*));
 
     for (int i = 0; i < property.count; i++) {
         result[i] = generatorPassword(property);
