@@ -10,15 +10,8 @@ int main(int argc, char* argv[])
     if (getPasswordProperties(&property, argc, argv)) {
         char** passwords = generatorPasswords(property);
 
-        for (int i = 0; i < property.count; i++) {
-            printf("%s\n", passwords[i]);
-        }
-
-        for (int i = 0; i < property.count; i++) {
-            free(passwords[i]);
-        }
-
-        free(passwords);
+        printPasswords(passwords, property.count);
+        freePasswords(passwords, property.count);
     }
 
     return 0;
