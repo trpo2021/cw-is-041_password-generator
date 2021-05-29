@@ -2,7 +2,7 @@
 #include "ctest.h"
 #include <stdlib.h>
 
-CTEST(initEasyPasswordProperties, pass_properties_test1)
+CTEST(initEasyPasswordProperties, pass_properties_easy)
 {
     password_properties property = initEasyPasswordProperties();
     ASSERT_EQUAL(1, property.count);
@@ -13,7 +13,7 @@ CTEST(initEasyPasswordProperties, pass_properties_test1)
     ASSERT_EQUAL(false, property.flag_special_symbol);
 }
 
-CTEST(initMediumPasswordProperties, pass_properties_test2)
+CTEST(initMediumPasswordProperties, pass_properties_medium)
 {
     password_properties property = initMediumPasswordProperties();
     ASSERT_EQUAL(1, property.count);
@@ -24,7 +24,7 @@ CTEST(initMediumPasswordProperties, pass_properties_test2)
     ASSERT_EQUAL(false, property.flag_special_symbol);
 }
 
-CTEST(initHardPasswordProperties, pass_properties_test3)
+CTEST(initHardPasswordProperties, pass_properties_hard)
 {
     password_properties property = initHardPasswordProperties();
     ASSERT_EQUAL(1, property.count);
