@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-CTEST(getPasswordProperties, parc_no_argument_test_1)
+CTEST(getPasswordProperties, parc_no_argument)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv = "./exe";
@@ -21,7 +21,7 @@ CTEST(getPasswordProperties, parc_no_argument_test_1)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_small_letters_test_2)
+CTEST(getPasswordProperties, parc_small_letters)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-sa"};
@@ -39,7 +39,7 @@ CTEST(getPasswordProperties, parc_small_letters_test_2)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_capital_letters_test_3)
+CTEST(getPasswordProperties, parc_capital_letters)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-sA"};
@@ -57,7 +57,7 @@ CTEST(getPasswordProperties, parc_capital_letters_test_3)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_numbers_test_4)
+CTEST(getPasswordProperties, parc_numbers)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-s1"};
@@ -75,7 +75,7 @@ CTEST(getPasswordProperties, parc_numbers_test_4)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_sp_simbols_test_5)
+CTEST(getPasswordProperties, parc_sp_simbols)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-s!"};
@@ -93,7 +93,7 @@ CTEST(getPasswordProperties, parc_sp_simbols_test_5)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_sm_cap_letters_test_6)
+CTEST(getPasswordProperties, parc_sm_cap_letters)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-sAa"};
@@ -111,7 +111,7 @@ CTEST(getPasswordProperties, parc_sm_cap_letters_test_6)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_all_no_special_test_7)
+CTEST(getPasswordProperties, parc_all_no_special)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-sAa0"};
@@ -129,7 +129,7 @@ CTEST(getPasswordProperties, parc_all_no_special_test_7)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_all_test_8)
+CTEST(getPasswordProperties, parc_all)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-sAa4/"};
@@ -147,7 +147,7 @@ CTEST(getPasswordProperties, parc_all_test_8)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_cap_special_test_9)
+CTEST(getPasswordProperties, parc_cap_special)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-sA!"};
@@ -165,7 +165,7 @@ CTEST(getPasswordProperties, parc_cap_special_test_9)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_all_no_cap_test_10)
+CTEST(getPasswordProperties, parc_all_no_cap)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-s!a8"};
@@ -183,7 +183,7 @@ CTEST(getPasswordProperties, parc_all_no_cap_test_10)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_3_args_test_11)
+CTEST(getPasswordProperties, parc_3_args)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-s!a8", "-l10"};
@@ -201,7 +201,7 @@ CTEST(getPasswordProperties, parc_3_args_test_11)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_4_args_test_12)
+CTEST(getPasswordProperties, parc_4_args)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-s!a8", "-l10", "-c8"};
@@ -219,7 +219,7 @@ CTEST(getPasswordProperties, parc_4_args_test_12)
     ASSERT_EQUAL(8, property.count);
 }
 
-CTEST(getPasswordProperties, parc_2_args_test_13)
+CTEST(getPasswordProperties, parc_2_args_l)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-l10"};
@@ -237,7 +237,7 @@ CTEST(getPasswordProperties, parc_2_args_test_13)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_2_args_test_14)
+CTEST(getPasswordProperties, parc_2_args_c)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "-c10"};
@@ -255,7 +255,7 @@ CTEST(getPasswordProperties, parc_2_args_test_14)
     ASSERT_EQUAL(10, property.count);
 }
 
-CTEST(getPasswordProperties, parc_2_args_easy_test_15)
+CTEST(getPasswordProperties, parc_2_args_easy)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--mod=easy"};
@@ -273,7 +273,7 @@ CTEST(getPasswordProperties, parc_2_args_easy_test_15)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_2_args_medium_test_16)
+CTEST(getPasswordProperties, parc_2_args_medium)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--mod=medium"};
@@ -291,7 +291,7 @@ CTEST(getPasswordProperties, parc_2_args_medium_test_16)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_2_args_hard_test_17)
+CTEST(getPasswordProperties, parc_2_args_hard)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--mod=hard"};
@@ -309,7 +309,7 @@ CTEST(getPasswordProperties, parc_2_args_hard_test_17)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_3_args_hard_test_18)
+CTEST(getPasswordProperties, parc_3_args_hard_c)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--mod=hard", "-c10"};
@@ -327,7 +327,7 @@ CTEST(getPasswordProperties, parc_3_args_hard_test_18)
     ASSERT_EQUAL(10, property.count);
 }
 
-CTEST(getPasswordProperties, parc_4_args_hard_test_19)
+CTEST(getPasswordProperties, parc_4_args_hard)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--mod=hard", "-l10", "-c15"};
@@ -345,7 +345,7 @@ CTEST(getPasswordProperties, parc_4_args_hard_test_19)
     ASSERT_EQUAL(15, property.count);
 }
 
-CTEST(getPasswordProperties, parc_3_args_hard_test_20)
+CTEST(getPasswordProperties, parc_3_args_hard_l)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--mod=hard", "-l10"};
@@ -363,7 +363,7 @@ CTEST(getPasswordProperties, parc_3_args_hard_test_20)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_full_l_test_21)
+CTEST(getPasswordProperties, parc_long_l)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--mod=hard", "--length=10"};
@@ -380,7 +380,7 @@ CTEST(getPasswordProperties, parc_full_l_test_21)
     ASSERT_EQUAL(10, property.length);
     ASSERT_EQUAL(1, property.count);
 }
-CTEST(getPasswordProperties, parc_full_c_test_22)
+CTEST(getPasswordProperties, parc_long_c)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--mod=hard", "--count=10"};
@@ -397,7 +397,7 @@ CTEST(getPasswordProperties, parc_full_c_test_22)
     ASSERT_EQUAL(8, property.length);
     ASSERT_EQUAL(10, property.count);
 }
-CTEST(getPasswordProperties, parc_incor_l_test_23)
+CTEST(getPasswordProperties, parc_incor_l_)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--mod=hard", "--l10"};
@@ -414,7 +414,7 @@ CTEST(getPasswordProperties, parc_incor_l_test_23)
     ASSERT_EQUAL(8, property.length);
     ASSERT_EQUAL(1, property.count);
 }
-CTEST(getPasswordProperties, parc_incor_mod_test_24)
+CTEST(getPasswordProperties, parc_incor_mod)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--modhard", "-l10"};
@@ -431,7 +431,7 @@ CTEST(getPasswordProperties, parc_incor_mod_test_24)
     ASSERT_EQUAL(8, property.length);
     ASSERT_EQUAL(1, property.count);
 }
-CTEST(getPasswordProperties, parc_incor_l_test_25)
+CTEST(getPasswordProperties, parc_incor_l)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--mod=hard", "-l=10"};
@@ -448,7 +448,7 @@ CTEST(getPasswordProperties, parc_incor_l_test_25)
     ASSERT_EQUAL(8, property.length);
     ASSERT_EQUAL(1, property.count);
 }
-CTEST(getPasswordProperties, parc_incor_full_c_test_26)
+CTEST(getPasswordProperties, parc_incor_full_c)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--mod=hard", "-count10"};
@@ -466,7 +466,7 @@ CTEST(getPasswordProperties, parc_incor_full_c_test_26)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_incor_full_c_test_27)
+CTEST(getPasswordProperties, parc_incor_full_c_)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--symbols=Aa0", "-count10"};
@@ -484,7 +484,7 @@ CTEST(getPasswordProperties, parc_incor_full_c_test_27)
     ASSERT_EQUAL(1, property.count);
 }
 
-CTEST(getPasswordProperties, parc_full_all_test_28)
+CTEST(getPasswordProperties, parc_full_all)
 {
     password_properties property = initMediumPasswordProperties();
     char* argv[] = {"./exe", "--symbols=Aa0", "--length=10", "--count=10"};

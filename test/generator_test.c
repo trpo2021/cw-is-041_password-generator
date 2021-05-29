@@ -2,7 +2,7 @@
 #include "ctest.h"
 #include <stdlib.h>
 
-CTEST(generatorPassword, generatorPassword_test1)
+CTEST(generatorPassword, genPassword_easy)
 {
     password_properties property = initEasyPasswordProperties();
 
@@ -16,7 +16,7 @@ CTEST(generatorPassword, generatorPassword_test1)
     ASSERT_EQUAL(8, strlen(result));
 }
 
-CTEST(generatorPassword, generatorPassword_test2)
+CTEST(generatorPassword, genPassword_medium)
 {
     password_properties property = initMediumPasswordProperties();
 
@@ -30,7 +30,7 @@ CTEST(generatorPassword, generatorPassword_test2)
     ASSERT_EQUAL(8, strlen(result));
 }
 
-CTEST(generatorPassword, generatorPassword_test3)
+CTEST(generatorPassword, genPassword_hard)
 {
     password_properties property = initHardPasswordProperties();
 
@@ -44,7 +44,7 @@ CTEST(generatorPassword, generatorPassword_test3)
     ASSERT_EQUAL(8, strlen(result));
 }
 
-CTEST(generatorPassword, generatorPassword_test4)
+CTEST(generatorPassword, genPasswords_easy)
 {
     password_properties property = initEasyPasswordProperties();
 
@@ -56,7 +56,7 @@ CTEST(generatorPassword, generatorPassword_test4)
     ASSERT_FALSE(checkSpecialSymbol(passwords[0], property.length));
 }
 
-CTEST(generatorPassword, generatorPassword_test5)
+CTEST(generatorPassword, genPasswords_medium)
 {
     password_properties property = initMediumPasswordProperties();
 
@@ -68,7 +68,7 @@ CTEST(generatorPassword, generatorPassword_test5)
     ASSERT_FALSE(checkSpecialSymbol(passwords[0], property.length));
 }
 
-CTEST(generatorPassword, generatorPassword_test6)
+CTEST(generatorPassword, genPasswords_hard)
 {
     password_properties property = initHardPasswordProperties();
 
@@ -80,7 +80,7 @@ CTEST(generatorPassword, generatorPassword_test6)
     ASSERT_TRUE(checkSpecialSymbol(passwords[0], property.length));
 }
 
-CTEST(generatorPassword, generatorPassword_test7)
+CTEST(generatorPassword, genPasswords_2easy)
 {
     password_properties property = initEasyPasswordProperties();
     property.count = 2;
@@ -102,7 +102,7 @@ CTEST(generatorPassword, generatorPassword_test7)
     ASSERT_EQUAL(8, strlen(passwords[1]));
 }
 
-CTEST(generatorPassword, generatorPassword_test8)
+CTEST(generatorPassword, genPasswords_2medium)
 {
     password_properties property = initMediumPasswordProperties();
     property.count = 2;
@@ -124,7 +124,7 @@ CTEST(generatorPassword, generatorPassword_test8)
     ASSERT_EQUAL(8, strlen(passwords[1]));
 }
 
-CTEST(generatorPassword, generatorPassword_test9)
+CTEST(generatorPassword, genPasswords_2hard)
 {
     password_properties property = initHardPasswordProperties();
     property.count = 2;
@@ -146,7 +146,7 @@ CTEST(generatorPassword, generatorPassword_test9)
     ASSERT_EQUAL(8, strlen(passwords[1]));
 }
 
-CTEST(generatorPassword, generatorPassword_test10)
+CTEST(generatorPassword, genPasswords_lneasy)
 {
     password_properties property = initEasyPasswordProperties();
     property.length = 20;
@@ -161,7 +161,7 @@ CTEST(generatorPassword, generatorPassword_test10)
     ASSERT_EQUAL(20, strlen(passwords[0]));
 }
 
-CTEST(generatorPassword, generatorPassword_test11)
+CTEST(generatorPassword, genPasswords_lnmedium)
 {
     password_properties property = initMediumPasswordProperties();
     property.length = 20;
@@ -176,7 +176,7 @@ CTEST(generatorPassword, generatorPassword_test11)
     ASSERT_EQUAL(20, strlen(passwords[0]));
 }
 
-CTEST(generatorPassword, generatorPassword_test12)
+CTEST(generatorPassword, genPassword_lnhard)
 {
     password_properties property = initHardPasswordProperties();
     property.length = 20;
@@ -191,7 +191,7 @@ CTEST(generatorPassword, generatorPassword_test12)
     ASSERT_EQUAL(20, strlen(passwords[0]));
 }
 
-CTEST(generatorPassword, generatorPassword_test13)
+CTEST(generatorPassword, genPasswords_2lneasy)
 {
     password_properties property = initEasyPasswordProperties();
     property.count = 2;
@@ -214,7 +214,7 @@ CTEST(generatorPassword, generatorPassword_test13)
     ASSERT_EQUAL(20, strlen(passwords[1]));
 }
 
-CTEST(generatorPassword, generatorPassword_test14)
+CTEST(generatorPassword, genPasswords_2lnmedium)
 {
     password_properties property = initMediumPasswordProperties();
     property.count = 2;
@@ -237,7 +237,7 @@ CTEST(generatorPassword, generatorPassword_test14)
     ASSERT_EQUAL(20, strlen(passwords[1]));
 }
 
-CTEST(generatorPassword, generatorPassword_test15)
+CTEST(generatorPassword, genPasswords_2lnhard)
 {
     password_properties property = initHardPasswordProperties();
     property.count = 2;
@@ -260,7 +260,7 @@ CTEST(generatorPassword, generatorPassword_test15)
     ASSERT_EQUAL(20, strlen(passwords[1]));
 }
 
-CTEST(generatorPassword, generatorPassword_test16)
+CTEST(generatorPassword, genPasswords_enl_c1)
 {
     password_properties property = initHardPasswordProperties();
     property.count = 150;
@@ -283,7 +283,7 @@ CTEST(generatorPassword, generatorPassword_test16)
     ASSERT_EQUAL(20, strlen(passwords[149]));
 }
 
-CTEST(generatorPassword, generatorPassword_test17)
+CTEST(generatorPassword, genPasswords_enl_c2)
 {
     password_properties property = initHardPasswordProperties();
     property.count = 1150;
@@ -306,7 +306,7 @@ CTEST(generatorPassword, generatorPassword_test17)
     ASSERT_EQUAL(20, strlen(passwords[1149]));
 }
 
-CTEST(generatorPassword, generatorPassword_test18)
+CTEST(generatorPassword, genPasswords_enl_l1)
 {
     password_properties property = initHardPasswordProperties();
     property.count = 2;
@@ -329,7 +329,7 @@ CTEST(generatorPassword, generatorPassword_test18)
     ASSERT_EQUAL(39, strlen(passwords[1]));
 }
 
-CTEST(generatorPassword, generatorPassword_test19)
+CTEST(generatorPassword, genPasswords_enl_l2)
 {
     password_properties property = initHardPasswordProperties();
     property.count = 2;
@@ -350,7 +350,7 @@ CTEST(generatorPassword, generatorPassword_test19)
     ASSERT_FALSE(checkLength(strlen(passwords[1])));
 }
 
-CTEST(generatorPassword, generatorPassword_test20)
+CTEST(generatorPassword, genPasswords_enl_cl)
 {
     password_properties property = initHardPasswordProperties();
     property.count = 1150;
