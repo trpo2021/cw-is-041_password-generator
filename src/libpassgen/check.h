@@ -1,8 +1,6 @@
 #pragma once
 #include "const.h"
 #include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 bool checkCount(int count);
